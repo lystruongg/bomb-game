@@ -101,96 +101,95 @@ const bombConfig = [
 ];
 
 const questionsData = [
-
   {
-    text: "Khẳng định: “Năm tháng sẽ trôi qua, nhưng thắng lợi của nhân dân ta trong sự nghiệp kháng chiến chống Mỹ, cứu nước mãi mãi được ghi vào lịch sử dân tộc ta như một trong những trang chói lọi nhất...” là của Đại hội nào của Đảng?",
-    options: ["A. Đại hội lần thứ VI", "B. Đại hội lần thứ V", "C. Đại hội lần thứ IV", "D. Đại hội lần thứ III"],
+    text: "Theo tư tưởng Hồ Chí Minh, đại đoàn kết toàn dân tộc có vai trò như thế nào đối với cách mạng Việt Nam?",
+    options: ["A. Là phương pháp vận động quần chúng trong từng giai đoạn", "B. Là vấn đề có ý nghĩa chiến lược, quyết định thành công của cách mạng", "C. Là nhiệm vụ riêng của Mặt trận dân tộc thống nhất", "D. Là mục tiêu chỉ đặt ra trong cách mạng dân tộc dân chủ"],
+    answer: "B"
+  },
+  {
+    text: "Đại đoàn kết toàn dân tộc theo Hồ Chí Minh được xác định là:",
+    options: ["A. Một khẩu hiệu tuyên truyền", "B. Một biện pháp tình thế", "C. Một mục tiêu, nhiệm vụ hàng đầu của cách mạng Việt Nam", "D. Một nhiệm vụ chủ yếu trong lĩnh vực kinh tế"],
     answer: "C"
   },
   {
-    text: "Một trong những bài học kinh nghiệm lãnh đạo của Đảng trong thời kỳ 1954 - 1975 là:",
-    options: ["A. Giương cao ngọn cờ độc lập dân tộc và chủ nghĩa xã hội nhằm huy động sức mạnh toàn dân đánh Mỹ, cả nước đánh Mỹ", "B. Chỉ tập trung xây dựng chủ nghĩa xã hội ở miền Bắc", "C. Hạn chế sự tham gia của quần chúng nhân dân trong chiến tranh", "D. Không tranh thủ sự đồng tình, ủng hộ của quốc tế"],
+    text: "Chủ thể của khối đại đoàn kết toàn dân tộc theo tư tưởng Hồ Chí Minh là:",
+    options: ["A. Giai cấp công nhân và nông dân", "B. Đảng Cộng sản Việt Nam", "C. Các tầng lớp trí thức và thanh niên", "D. Toàn thể nhân dân Việt Nam"],
+    answer: "D"
+  },
+  {
+    text: "Lực lượng nào là nền tảng của khối đại đoàn kết toàn dân tộc?",
+    options: ["A. Công nhân, nông dân và trí thức", "B. Công nhân, nông dân và doanh nhân", "C. Nông dân, trí thức và thanh niên", "D. Công nhân, trí thức và các tôn giáo"],
     answer: "A"
   },
   {
-    text: "Sau năm 1975, đất nước ta bước vào thời kỳ nào?",
-    options: ["A. Kinh tế thị trường xã hội chủ nghĩa", "B. Đất nước hòa bình, độc lập thống nhất, cả nước quá độ lên chủ nghĩa xã hội", "C. Hoàn thành công nghiệp hóa, hiện đại hóa", "D. Đổi mới toàn diện và hội nhập quốc tế"],
+    text: "Yếu tố “hạt nhân” trong khối đại đoàn kết toàn dân tộc là:",
+    options: ["A. Sự đoàn kết giữa các tầng lớp nhân dân", "B. Sự đoàn kết và thống nhất trong Đảng", "C. Sự đoàn kết giữa các dân tộc", "D. Sự đoàn kết giữa các tôn giáo"],
     answer: "B"
   },
   {
-    text: "Nhiệm vụ đầu tiên, bức thiết nhất được Đảng đặt ra sau đại thắng mùa Xuân năm 1975 là gì?",
-    options: ["A. Phát triển các quy chế, chuẩn mực về kinh tế", "B. Cải tạo công thương nghiệp tư bản tư doanh", "C. Thống nhất đất nước về mặt nhà nước", "D. Khôi phục hoàn toàn cơ sở hạ tầng thời chiến"],
+    text: "Theo Hồ Chí Minh, để xây dựng khối đại đoàn kết toàn dân tộc cần:",
+    options: ["A. Xóa bỏ hoàn toàn mọi khác biệt về lợi ích", "B. Chỉ quan tâm đến lợi ích của một giai cấp", "C. Lấy lợi ích chung làm điểm quy tụ, đồng thời tôn trọng lợi ích khác biệt chính đáng", "D. Đặt lợi ích cá nhân lên trên lợi ích dân tộc"],
     answer: "C"
   },
   {
-    text: "Đoàn đại biểu miền Nam do ai dẫn đầu tham dự Hội nghị Hiệp thương chính trị với miền Bắc vào tháng 11/1975?",
-    options: ["A. Phạm Hùng", "B. Huỳnh Tấn Phát", "C. Trường Chinh", "D. Nguyễn Hữu Thọ"],
+    text: "Truyền thống nào cần được kế thừa để xây dựng khối đại đoàn kết toàn dân tộc?",
+    options: ["A. Yêu nước, nhân nghĩa, đoàn kết", "B. Cạnh tranh, cá nhân, tự chủ", "C. Đổi mới, sáng tạo, hội nhập", "D. Kỷ luật, cạnh tranh, phát triển"],
     answer: "A"
   },
   {
-    text: "Điền từ còn thiếu trong Nghị quyết Hội nghị TW 24 (8/1975): “... đất nước vừa là nguyện vọng thiết tha của nhân dân cả nước, vừa là quy luật khách quan của sự phát triển cách mạng Việt Nam, của lịch sử dân tộc Việt Nam.”",
-    options: ["A. Độc lập", "B. Thống nhất", "C. Giải phóng", "D. Đổi mới"],
+    text: "Vì sao Hồ Chí Minh đề cao lòng khoan dung, độ lượng trong xây dựng đại đoàn kết?",
+    options: ["A. Vì mọi người đều có quan điểm giống nhau", "B. Vì mỗi người đều có ưu điểm và khuyết điểm, cần biết trân trọng mặt tốt và quy tụ lực lượng", "C. Vì đoàn kết không cần dựa trên mục tiêu chung", "D. Vì không cần phân biệt đúng và sai"],
     answer: "B"
   },
   {
-    text: "Hội nghị Hiệp thương chính trị giữa hai đoàn đại biểu miền Bắc và miền Nam (11/1975) đã diễn ra tại đâu?",
-    options: ["A. Sài Gòn", "B. Hà Nội", "C. Huế", "D. Đà Nẵng"],
-    answer: "A"
-  },
-  {
-    text: "Cuộc Tổng tuyển cử bầu Quốc hội chung trên toàn lãnh thổ (25/4/1976) được tiến hành theo những nguyên tắc nào?",
-    options: ["A. Dân chủ, phổ thông, bình đẳng, trực tiếp và bỏ phiếu kín", "B. Hiệp thương dân chủ và chỉ định đại biểu", "C. Bỏ phiếu gián tiếp qua hội đồng nhân dân các cấp", "D. Phổ thông, công khai và trực tiếp"],
-    answer: "A"
-  },
-  {
-    text: "Tại kỳ họp thứ nhất Quốc hội khóa VI (6-7/1976), ai được bầu làm Chủ tịch nước đầu tiên của nước Cộng hòa Xã hội chủ nghĩa Việt Nam?",
-    options: ["A. Phạm Văn Đồng", "B. Tôn Đức Thắng", "C. Trường Chinh", "D. Lê Duẩn"],
-    answer: "B"
-  },
-  {
-    text: "Mặt trận Tổ quốc Việt Nam, Đoàn Thanh niên Lao động Hồ Chí Minh, Tổng Công đoàn Việt Nam... được gọi chung là gì?",
-    options: ["A. Cơ quan quyền lực nhà nước", "B. Các tổ chức kinh tế tập thể", "C. Các tổ chức chính trị - xã hội", "D. Cơ quan hành chính trung ương"],
+    text: "Theo Hồ Chí Minh, yếu tố nào là nguồn sức mạnh và chỗ dựa vững chắc của khối đại đoàn kết toàn dân tộc?",
+    options: ["A. Nhà nước", "B. Đảng", "C. Nhân dân", "D. Kinh tế"],
     answer: "C"
   },
   {
-    text: "Đại hội đại biểu toàn quốc lần thứ IV của Đảng (12/1976) đã quyết định đổi tên Đảng thành gì?",
-    options: ["A. Đảng Lao động Việt Nam", "B. Đảng Cộng sản Đông Dương", "C. Đảng Cộng sản Việt Nam", "D. Hội đồng Cách mạng Việt Nam"],
-    answer: "C"
-  },
-  {
-    text: "Đại hội lần thứ IV của Đảng (12/1976) đã xác định đặc điểm nào là lớn nhất của cách mạng Việt Nam trong giai đoạn mới?",
-    options: ["A. Cả nước tiến hành cuộc đấu tranh giải phóng dân tộc", "B. Từ một xã hội kinh tế còn phổ biến là sản xuất nhỏ tiến thẳng lên CNXH, bỏ qua giai đoạn phát triển TBCN", "C. Chịu hậu quả nặng nề do sự bao vây cấm vận của chủ nghĩa đế quốc", "D. Đã hoàn thành xong thời kỳ quá độ lên chủ nghĩa xã hội"],
+    text: "Câu nói nào thể hiện rõ nhất tư tưởng của Hồ Chí Minh về sức mạnh của đoàn kết?",
+    options: ["A. “Không có gì quý hơn độc lập, tự do.”", "B. “Đoàn kết, đoàn kết, đại đoàn kết – Thành công, thành công, đại thành công.”", "C. “Nước lấy dân làm gốc.”", "D. “Dĩ bất biến, ứng vạn biến.”"],
     answer: "B"
   },
   {
-    text: "Đại hội IV của Đảng xác định nhiệm vụ trung tâm của cả thời kỳ quá độ lên CNXH ở nước ta là gì?",
-    options: ["A. Đẩy mạnh công nghiệp hóa xã hội chủ nghĩa", "B. Phát triển kinh tế nhiều thành phần", "C. Hoàn thành cải cách ruộng đất", "D. Đẩy mạnh kinh tế thị trường"],
+    text: "Đúng hay Sai? Chính sách và phương pháp tập hợp lực lượng có thể thay đổi theo từng giai đoạn cách mạng, nhưng chủ trương đại đoàn kết toàn dân tộc là nhất quán.",
+    options: ["A. Đúng", "B. Sai"],
     answer: "A"
   },
   {
-    text: "Một trong những hạn chế, khuyết điểm chủ quan của Đại hội IV (1976) được Đảng chỉ ra là gì?",
-    options: ["A. Đánh giá quá thấp sức mạnh của khối đại đoàn kết dân tộc", "B. Không chú trọng đến nhiệm vụ củng cố an ninh - quốc phòng", "C. Dự kiến hoàn thành đưa nền kinh tế từ sản xuất nhỏ lên sản xuất lớn XHCN trong khoảng 20 năm", "D. Chưa đặt nhiệm vụ thống nhất đất nước lên hàng đầu"],
-    answer: "C"
-  },
-  {
-    text: "Hội nghị Trung ương 6 (8/1979) được coi là bước đột phá đầu tiên trong đổi mới kinh tế của Đảng với chủ trương nào?",
-    options: ["A. Phát triển kinh tế thị trường định hướng xã hội chủ nghĩa", "B. Phá bỏ những rào cản để cho “sản xuất bung ra”", "C. Tư nhân hóa hoàn toàn các xí nghiệp quốc doanh", "D. Xóa bỏ triệt để các hợp tác xã nông nghiệp"],
+    text: "Đúng hay Sai? Theo Hồ Chí Minh, chỉ những người thuộc giai cấp công nhân và nông dân mới là chủ thể của khối đại đoàn kết toàn dân tộc.",
+    options: ["A. Đúng", "B. Sai"],
     answer: "B"
   },
   {
-    text: "Trước hiện tượng \"khoán chui\" trong hợp tác xã nông nghiệp, Ban Bí thư đã ban hành văn kiện nào vào tháng 1/1981?",
-    options: ["A. Chỉ thị số 100-CT/TW", "B. Chỉ thị số 228-CT/TW", "C. Quyết định số 25-CP", "D. Quyết định số 26-CP"],
+    text: "Đúng hay Sai? Theo Hồ Chí Minh, muốn xây dựng đại đoàn kết phải loại bỏ những người từng mắc sai lầm hoặc có khuyết điểm.",
+    options: ["A. Đúng", "B. Sai"],
+    answer: "B"
+  },
+  {
+    text: "Đúng hay Sai? Niềm tin vào nhân dân là một trong những điều kiện quan trọng để thực hiện đại đoàn kết toàn dân tộc.",
+    options: ["A. Đúng", "B. Sai"],
     answer: "A"
   },
   {
-    text: "Cuối tháng 12/1978, tập đoàn Pôn Pốt huy động tổng lực tiến công xâm lược trên toàn tuyến biên giới Tây Nam của Việt Nam nhằm mục tiêu gì?",
-    options: ["A. Chiếm đảo Thổ Chu và Phú Quốc", "B. Nhanh chóng tiến sâu vào nội địa Việt Nam", "C. Buộc Việt Nam mở cửa biên giới tự do thương mại", "D. Phá hoại quan hệ hữu nghị giữa Việt Nam và Liên Xô"],
+    text: "Hoàn thành câu nói nổi tiếng của Hồ Chí Minh: “Đoàn kết, đoàn kết, ________; Thành công, thành công, ________.”",
+    options: ["A. đại đoàn kết – đại thành công", "B. đại thành công – đại đoàn kết", "C. toàn dân tộc – đại đoàn kết", "D. sức mạnh – vững bền"],
+    answer: "A"
+  },
+  {
+    text: "Theo nội dung đã học, khối đại đoàn kết toàn dân tộc lấy ________, ________ và ________ làm nền tảng.",
+    options: ["A. công nhân – nông dân – thanh niên", "B. công nhân – nông dân – trí thức", "C. nông dân – trí thức – doanh nhân", "D. công nhân – trí thức – quân đội"],
     answer: "B"
   },
   {
-    text: "Ngày 17/2/1979, diễn ra sự kiện lịch sử quan trọng nào trên tuyến biên giới nước ta?",
-    options: ["A. Tập đoàn Pôn Pốt tấn công xâm lấn biên giới Tây Nam", "B. Trung Quốc huy động hơn 60 vạn quân đồng loạt tấn công toàn tuyến biên giới phía Bắc", "C. Lực lượng FULRO chiếm đóng các tỉnh Tây Nguyên", "D. Mỹ đưa hạm đội vào phong tỏa vùng biển miền Trung"],
-    answer: "B"
+    text: "Một nhóm người có lợi ích riêng khác với nhóm khác nhưng những lợi ích đó không trái với lợi ích chung của dân tộc. Theo tư tưởng Hồ Chí Minh, cách xử lý phù hợp là:",
+    options: ["A. Loại bỏ nhóm có lợi ích khác biệt", "B. Buộc tất cả phải có lợi ích hoàn toàn giống nhau", "C. Tôn trọng lợi ích khác biệt chính đáng và tìm điểm tương đồng để đoàn kết", "D. Không quan tâm đến lợi ích của các nhóm"],
+    answer: "C"
+  },
+  {
+    text: "Một người từng mắc sai lầm nhưng hiện nay có thiện chí đóng góp cho cộng đồng. Vận dụng tư tưởng Hồ Chí Minh về đại đoàn kết, cách ứng xử phù hợp là:",
+    options: ["A. Không cho người đó tham gia vì sai lầm trong quá khứ", "B. Chỉ nhìn vào khuyết điểm của người đó", "C. Khoan dung, trân trọng mặt tốt và tạo điều kiện để họ sửa chữa, đóng góp", "D. Bỏ qua hoàn toàn mọi sai lầm của người đó"],
+    answer: "C"
   }
 ];
 
@@ -360,8 +359,8 @@ function App() {
     <div className="app-container">
       
       <div className="title-container slide-in-top">
-        <h1 className="game-title">CHIẾN DỊCH LẬT MỞ</h1>
-        <div className="subtitle-badge bounce-anim">TỰ HÀO LỊCH SỬ</div>
+        <h1 className="game-title">TƯ TƯỞNG HỒ CHÍ MINH</h1>
+        <div className="subtitle-badge bounce-anim">ĐẠI ĐOÀN KẾT TOÀN DÂN TỘC</div>
       </div>
       
       <div className="board-wrapper fade-in-up">
