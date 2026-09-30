@@ -308,6 +308,9 @@ function App() {
           break;
       }
       
+      if (t.score < 0) t.score = 0;
+      if (otherT.score < 0) otherT.score = 0;
+      
       newTeams[teamIndex] = t;
       newTeams[otherIdx] = otherT;
       return newTeams;
@@ -392,6 +395,7 @@ function App() {
       setTeams(prev => {
         const newTeams = [...prev];
         newTeams[currentTeam].score += choice.value; // choice.value is negative
+        if (newTeams[currentTeam].score < 0) newTeams[currentTeam].score = 0;
         return newTeams;
       });
     }
