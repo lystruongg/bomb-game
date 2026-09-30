@@ -87,17 +87,17 @@ export const sounds = {
 };
 
 const bombConfig = [
-  { text: '💥 BOM NỔ -1', desc: 'Trừ ngay 1 điểm. Qua lượt.', type: 'bomb-bad', count: 3, sound: 'explosion' },
-  { text: '💣 BOM NỔ -2', desc: 'Trừ ngay 2 điểm. Qua lượt.', type: 'bomb-bad', count: 2, sound: 'explosion' },
-  { text: '🪚 CƯA ĐÔI', desc: 'Lập tức chia đôi số điểm hiện tại của đội bốc (làm tròn xuống).', type: 'bomb-bad', count: 1, sound: 'explosion' },
-  { text: '☠️ RESET', desc: 'Bay sạch điểm, đưa về số 0 tròn trĩnh.', type: 'bomb-bad', count: 1, sound: 'explosion' },
-  { text: '🎁 QUÀ TẶNG +1', desc: 'Lập tức cộng 1 điểm miễn phí.', type: 'bomb-good', count: 2, sound: 'correct' },
-  { text: '💎 QUÀ TẶNG +2', desc: 'Lập tức cộng 2 điểm miễn phí.', type: 'bomb-good', count: 2, sound: 'correct' },
-  { text: '🎲 ROULETTE NGA', desc: 'Hên xui 50/50: Hãy chọn 1 trong 2 lá bài để định đoạt số phận!', type: 'bomb-action', count: 1, sound: 'suspense' },
-  { text: '🥷 ĂN CƯỚP', desc: 'Chỉ định lấy 1 điểm từ 1 đội bất kỳ.', type: 'bomb-action', count: 2, sound: 'explosion' },
-  { text: '🔄 ĐỔI VẬN', desc: 'Tráo đổi toàn bộ điểm số hiện tại với 1 đội bất kỳ.', type: 'bomb-action', count: 1, sound: 'correct' },
-  { text: '🤝 CỘNG SINH', desc: 'Đội bốc trúng được +2 điểm, và có quyền kéo thêm 1 đội khác cùng được +2 điểm.', type: 'bomb-action', count: 2, sound: 'correct' },
-  { text: '🧤 BÀN TAY THANOS', desc: 'Giáng điểm của đội đang dẫn đầu xuống bằng mức điểm của đội đang bét bảng.', type: 'bomb-action', count: 1, sound: 'explosion' }
+  { text: '💥 BOM NỔ -1', desc: 'Trừ ngay 1 điểm. Qua lượt.', type: 'bomb-bad', count: 3, sound: 'explosion', effect: 'minus_1' },
+  { text: '💣 BOM NỔ -2', desc: 'Trừ ngay 2 điểm. Qua lượt.', type: 'bomb-bad', count: 2, sound: 'explosion', effect: 'minus_2' },
+  { text: '🪚 CƯA ĐÔI', desc: 'Lập tức chia đôi số điểm hiện tại của đội bốc (làm tròn xuống).', type: 'bomb-bad', count: 1, sound: 'explosion', effect: 'divide_2' },
+  { text: '☠️ RESET', desc: 'Bay sạch điểm, đưa về số 0 tròn trĩnh.', type: 'bomb-bad', count: 1, sound: 'explosion', effect: 'reset' },
+  { text: '🎁 QUÀ TẶNG +1', desc: 'Lập tức cộng 1 điểm miễn phí.', type: 'bomb-good', count: 2, sound: 'correct', effect: 'plus_1' },
+  { text: '💎 QUÀ TẶNG +2', desc: 'Lập tức cộng 2 điểm miễn phí.', type: 'bomb-good', count: 2, sound: 'correct', effect: 'plus_2' },
+  { text: '🎲 ROULETTE NGA', desc: 'Hên xui 50/50: Hãy chọn 1 trong 2 lá bài để định đoạt số phận!', type: 'bomb-action', count: 1, sound: 'suspense', effect: 'roulette' },
+  { text: '🥷 ĂN CƯỚP', desc: 'Chỉ định lấy 1 điểm từ 1 đội bất kỳ.', type: 'bomb-action', count: 2, sound: 'explosion', effect: 'steal_1' },
+  { text: '🔄 ĐỔI VẬN', desc: 'Tráo đổi toàn bộ điểm số hiện tại với 1 đội bất kỳ.', type: 'bomb-action', count: 1, sound: 'correct', effect: 'swap' },
+  { text: '🤝 CỘNG SINH', desc: 'Đội bốc trúng được +2 điểm, và có quyền kéo thêm 1 đội khác cùng được +2 điểm.', type: 'bomb-action', count: 2, sound: 'correct', effect: 'symbiosis' },
+  { text: '🧤 BÀN TAY THANOS', desc: 'Giáng điểm của đội đang dẫn đầu xuống bằng mức điểm của đội đang bét bảng.', type: 'bomb-action', count: 1, sound: 'explosion', effect: 'thanos' }
 ];
 
 const questionsData = [
@@ -196,6 +196,12 @@ const questionsData = [
 const revIcons = ['★', '☭', '★', '☭'];
 
 function App() {
+  const [teams, setTeams] = useState([
+    { name: 'ĐỘI A', score: 0 },
+    { name: 'ĐỘI B', score: 0 }
+  ]);
+  const [currentTeam, setCurrentTeam] = useState(null);
+
   const [cells, setCells] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null);
 
@@ -234,7 +240,8 @@ function App() {
           type: bomb.type, 
           isOpened: false,
           frontIcon: revIcons[Math.floor(Math.random() * revIcons.length)],
-          sound: bomb.sound
+          sound: bomb.sound,
+          effect: bomb.effect
         });
       }
     });
@@ -261,7 +268,58 @@ function App() {
     return () => clearInterval(timerId);
   }, [selectedCard, timeLeft, isQuestionSolved]);
 
+  const applyEffect = (effect, teamIndex) => {
+    if (teamIndex === null) return;
+    setTeams(prev => {
+      const newTeams = [...prev];
+      const t = { ...newTeams[teamIndex] };
+      const otherIdx = teamIndex === 0 ? 1 : 0;
+      const otherT = { ...newTeams[otherIdx] };
+      
+      switch(effect) {
+        case 'minus_1': t.score -= 1; break;
+        case 'minus_2': t.score -= 2; break;
+        case 'divide_2': t.score = Math.floor(t.score / 2); break;
+        case 'reset': t.score = 0; break;
+        case 'plus_1': t.score += 1; break;
+        case 'plus_2': t.score += 2; break;
+        case 'steal_1': 
+          t.score += 1; 
+          otherT.score -= 1; 
+          break;
+        case 'swap': 
+          const temp = t.score;
+          t.score = otherT.score;
+          otherT.score = temp;
+          break;
+        case 'symbiosis':
+          t.score += 2;
+          otherT.score += 2;
+          break;
+        case 'thanos':
+          if (t.score > otherT.score) {
+            t.score = otherT.score;
+          } else if (otherT.score > t.score) {
+            otherT.score = t.score;
+          }
+          break;
+        case 'question_correct':
+          t.score += 1;
+          break;
+      }
+      
+      newTeams[teamIndex] = t;
+      newTeams[otherIdx] = otherT;
+      return newTeams;
+    });
+  };
+
   const handleCellClick = (index) => {
+    if (currentTeam === null) {
+      alert("Vui lòng chọn đội trước khi chọn ô!");
+      return;
+    }
+
     const newCells = [...cells];
     let clickedCell = { ...newCells[index] };
     
@@ -305,6 +363,10 @@ function App() {
           if (clickedCell.type === 'bomb-good') {
             setTimeout(() => window.confetti && window.confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, zIndex: 10000 }), 300);
           }
+          
+          if (clickedCell.effect) {
+            applyEffect(clickedCell.effect, currentTeam);
+          }
         }
       }, 1800); // 1.8s suspense
     } else {
@@ -320,8 +382,18 @@ function App() {
     if (choice.value > 0) {
       setTimeout(() => window.confetti && window.confetti({ particleCount: 300, spread: 100, origin: { y: 0.5 }, zIndex: 10000 }), 100);
       sounds.correct();
+      setTeams(prev => {
+        const newTeams = [...prev];
+        newTeams[currentTeam].score += choice.value;
+        return newTeams;
+      });
     } else {
       sounds.explosion();
+      setTeams(prev => {
+        const newTeams = [...prev];
+        newTeams[currentTeam].score += choice.value; // choice.value is negative
+        return newTeams;
+      });
     }
   };
 
@@ -334,16 +406,20 @@ function App() {
 
     if (isCorrect) {
       setIsQuestionSolved(true);
+      applyEffect('question_correct', currentTeam);
       sounds.correct();
       setTimeout(() => window.confetti && window.confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 }, colors: ['#ffff00', '#00ff00'], zIndex: 10000 }), 100);
     } else {
       sounds.wrong();
+      setCurrentTeam(prev => prev === 0 ? 1 : 0);
+      setTimeLeft(30);
     }
   };
 
   const closeModal = () => {
     setSelectedCard(null);
     setBombEffect('');
+    setCurrentTeam(null);
   };
 
   const colHeaders = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -361,6 +437,20 @@ function App() {
       <div className="title-container slide-in-top">
         <h1 className="game-title">TƯ TƯỞNG HỒ CHÍ MINH</h1>
         <div className="subtitle-badge bounce-anim">ĐẠI ĐOÀN KẾT TOÀN DÂN TỘC</div>
+      </div>
+
+      <div className="teams-container">
+        {teams.map((team, index) => (
+          <div 
+            key={index} 
+            className={`team-card ${currentTeam === index ? 'active-team' : ''}`}
+            onClick={() => setCurrentTeam(index)}
+          >
+            <h2 className="team-name">{team.name}</h2>
+            <div className="team-score">{team.score}</div>
+            {currentTeam === index && <div className="team-turn-badge">LƯỢT CHỌN</div>}
+          </div>
+        ))}
       </div>
       
       <div className="board-wrapper fade-in-up">
@@ -418,6 +508,11 @@ function App() {
                 <div className="m-badges">
                   <span className="m-badge-primary">{selectedCard.label}</span>
                   <span className="m-badge-outline">TRẮC NGHIỆM</span>
+                  {currentTeam !== null && (
+                    <span className="m-badge-outline" style={{borderColor: '#2e7d32', color: '#2e7d32', backgroundColor: '#e8f5e9'}}>
+                      LƯỢT: {teams[currentTeam].name}
+                    </span>
+                  )}
                 </div>
                 <button className="m-close-btn" onClick={closeModal}>✕</button>
               </div>
